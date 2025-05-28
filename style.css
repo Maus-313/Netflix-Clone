@@ -1,6 +1,6 @@
-*{
+* {
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
     background-color: black;
     /* font-family: sans-serif; */
 }
@@ -11,7 +11,7 @@
     position: relative;
 }
 
-main{
+main {
     background-color: black;
     opacity: 0.5;
     width: 100%;
@@ -20,7 +20,7 @@ main{
     top: 0px;
 }
 
-nav{
+nav {
     background-color: rgba(247, 247, 247, 0);
     display: flex;
     z-index: 2;
@@ -30,40 +30,56 @@ nav{
     left: 0px;
     right: 0px;
     top: 0px;
-    height: 20vh;
+    margin: 10px;
 }
 
-nav img{
-    background-color: rgba(240, 248, 255, 0);
+nav img {
+    background-color: rgba(0, 0, 0, 0);
 }
 
-nav .topRightButton{
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(240, 248, 255, 0);
-}
-
-.topRightButton button{
-    background-color: rgba(39, 39, 39, 0.476);
-    color: white;
-    border: 1px solid white;
-    padding: 10px;
+.netflix_logo{
+    background-color: rgba(255, 0, 0, 0);
     height: 40px;
-    border-radius: 3px;
+    width: auto;
+}
+
+.nav-actions {
     display: flex;
     align-items: center;
-    margin: 5px;
-    font-weight: bold;
-    font-size: large;
+    gap: 1rem;
+    background-color: rgba(255, 0, 0, 0);
 }
 
-.topRightButton button:last-child{
-    background-color: red;
-    border: 0px;
-    padding: 8px 20px;
-    border-radius: 5px;
-}
-
-h1{
+.language-select {
+    background: transparent;
     color: white;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.language-select option {
+    color: black;
+}
+
+.sign-in-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #b00610;
+}
+
+option {
+    background-color: white;
+    color: black;
 }
