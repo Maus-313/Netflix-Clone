@@ -22,7 +22,7 @@
                     </select>
                 </div>
                 <button class="sign-in-btn">Sign In</button>
-            </div>
+            </div>      
         </nav>
 
         <!-- Hero Section -->
@@ -121,71 +121,8 @@
                     family-friendly TV shows and movies.
                 </div>
             </div>
-            <script>
-                document.querySelectorAll('.faq-question').forEach(function (q) {
-                    q.addEventListener('click', function () {
-                        const item = q.parentElement;
-                        const answer = item.querySelector('.faq-answer');
-                        const icon = q.querySelector('.faq-icon');
-                        const isOpen = answer.style.maxHeight;
-                        // Close all
-                        document.querySelectorAll('.faq-answer').forEach(a => {
-                            a.style.maxHeight = null;
-                            a.previousElementSibling.querySelector('.faq-icon').textContent = '+';
-                        });
-                        // Toggle current
-                        if (!isOpen) {
-                            answer.style.maxHeight = answer.scrollHeight + "px";
-                            icon.textContent = '−';
-                        }
-                    });
-                    q.addEventListener('mouseenter', function () {
-                        q.style.filter = 'brightness(1.3)';
-                    });
-                    q.addEventListener('mouseleave', function () {
-                        q.style.filter = '';
-                    });
-                });
-                // Hide all answers by default
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
-            </script>
-            <style>
-                .faq-item {
-                    margin-bottom: 10px;
-                    background: #222;
-                    border-radius: 4px;
-                    overflow: hidden;
-                }
-
-                .faq-question {
-                    cursor: pointer;
-                    padding: 20px;
-                    font-size: 1.2em;
-                    color: #fff;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    transition: filter 0.2s;
-                }
-
-                .faq-icon {
-                    font-size: 1.5em;
-                    margin-left: 10px;
-                    transition: transform 0.2s;
-                }
-
-                .faq-answer {
-                    background: #333;
-                    color: #fff;
-                    padding: 0 20px;
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: max-height 0.3s ease;
-                    font-size: 1em;
-                }
-            </style>
+            <script src="script.js"></script>
         </div>
-
     </div>
     </div>
 

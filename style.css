@@ -199,10 +199,46 @@ option {
     color: white;
 }
 
-.faq-question:hover{
+.faq-question:hover {
     background-color: rgba(255, 255, 255, 0.073);
+    transition: all 0.5s;
+    filter: brightness(1.1);
 }
 
-.faq-icon{
+.faq-icon {
     background-color: rgba(255, 0, 0, 0);
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    background: #222;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: filter 0.2s;
+}
+
+.faq-icon {
+    font-size: 1.5em;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.faq-answer {
+    background: #333;
+    color: #fff;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 1em;
 }
