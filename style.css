@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .top {
@@ -103,6 +104,10 @@ option {
 .mid {
     background-color: rgba(255, 0, 0, 0);
     color: rgb(247, 247, 247);
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .hero {
@@ -241,4 +246,267 @@ option {
     overflow: hidden;
     transition: max-height 0.3s ease;
     font-size: 1em;
+}
+
+
+.more-reasons-to-join {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a0a2e;
+    /* Darker purple for card Background */
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    /* Adjust as needed for consisstent height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    /* To contain images */
+}
+
+.card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Allows paragraph to take available space */
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.card .icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    /* Adjust icon size */
+    height: auto;
+    opacity: 0.8;
+    /* Slightly translucent */
+}
+
+/* Specific icon adjustments */
+.card:nth-child(1) .icon {
+    width: 120px;
+    /* Larger TV icon */
+    right: 10px;
+    bottom: 10px;
+}
+
+.card:nth-child(2) .icon {
+    width: 70px;
+    right: 30px;
+    bottom: 30px;
+}
+
+.card:nth-child(3) .icon {
+    width: 80px;
+    right: 25px;
+    bottom: 25px;
+}
+
+.card:nth-child(4) .icon {
+    width: 70px;
+    right: 25px;
+    bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: unset;
+        /* Allow height to adjust */
+    }
+}
+
+.footer-container {
+    width: 100%;
+    /* Adjust max-width as needed */
+    box-sizing: border-box;
+    /* Include padding in element's total width and height */
+}
+
+.footer-question {
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.footer-question a {
+    color: #737373;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    /* Smaller gap for list items */
+    margin-bottom: 30px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+    /* Space between list items */
+}
+
+.footer-column ul li a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.language-selector {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.language-selector select {
+    background-color: #000;
+    color: #737373;
+    border: 1px solid #737373;
+    padding: 12px 20px 12px 15px;
+    /* Adjust padding for icon space if needed */
+    font-size: 1em;
+    border-radius: 4px;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23737373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    width: 150px;
+    /* Adjust width as needed */
+}
+
+/* Icon for English selector - a generic globe/language icon */
+.language-selector .select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.language-selector .select-wrapper::before {
+    content: '🌐';
+    /* Globe icon */
+    font-size: 1em;
+    color: #737373;
+    position: absolute;
+    left: 15px;
+    /* Position icon inside select */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Make sure the icon doesn't interfere with clicks */
+    z-index: 1;
+    /* Ensure icon is above select element */
+}
+
+.language-selector select {
+    padding-left: 40px;
+    /* Make space for the icon */
+}
+
+
+.country-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.recaptcha-info {
+    font-size: 0.75em;
+    color: #737373;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.recaptcha-info a {
+    color: #0071eb;
+    /* Netflix blue for links */
+    text-decoration: none;
+}
+
+.recaptcha-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .footer-links {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        /* Stack columns on very small screens */
+    }
+
+    .footer-container {
+        padding: 30px 4%;
+    }
+
+    .footer-question {
+        font-size: 0.9em;
+    }
+
+    .language-selector select {
+        width: 100%;
+    }
+}
+
+.extraSpace {
+    height: 50px;
 }
