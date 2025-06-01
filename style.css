@@ -104,10 +104,10 @@ option {
 .mid {
     background-color: rgba(255, 0, 0, 0);
     color: rgb(247, 247, 247);
-
     display: flex;
     flex-direction: column;
     gap: 50px;
+    width: 60%;
 }
 
 .hero {
@@ -265,9 +265,10 @@ h2 {
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
     gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .card {
@@ -284,6 +285,7 @@ h2 {
     position: relative;
     overflow: hidden;
     /* To contain images */
+    width: 25%;
 }
 
 .card h3 {
@@ -312,34 +314,8 @@ h2 {
     width: 80px;
     /* Adjust icon size */
     height: auto;
-    opacity: 0.8;
     /* Slightly translucent */
-}
-
-/* Specific icon adjustments */
-.card:nth-child(1) .icon {
-    width: 120px;
-    /* Larger TV icon */
-    right: 10px;
-    bottom: 10px;
-}
-
-.card:nth-child(2) .icon {
-    width: 70px;
-    right: 30px;
-    bottom: 30px;
-}
-
-.card:nth-child(3) .icon {
-    width: 80px;
-    right: 25px;
-    bottom: 25px;
-}
-
-.card:nth-child(4) .icon {
-    width: 70px;
-    right: 25px;
-    bottom: 25px;
+    background-color: rgba(255, 0, 0, 0);
 }
 
 /* Responsive adjustments */
@@ -509,4 +485,37 @@ h2 {
 
 .extraSpace {
     height: 50px;
+}
+
+.trending-now-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem; /* optional spacing between items */
+    padding: 1rem 0;
+    flex-shrink: 0;
+    width: 100%; /* full width of the container */
+}
+
+.trending-item {
+    flex: 0 0 auto; /* prevent shrinking and allow horizontal scrolling */
+    width: 200px; /* adjust width as needed */
+}
+
+.trending-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Optional: Hide the scroll bar while keeping scrolling enabled */
+
+
+.trending-now-content::-webkit-scrollbar {
+    display: none;
+}
+
+.trending-now-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
